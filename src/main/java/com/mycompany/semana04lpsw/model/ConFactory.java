@@ -26,7 +26,7 @@ public class ConFactory {
          return DriverManager.getConnection("jdbc:mysql://localhost:3306/lpsw?zeroDateTimeBehavior=convertToNull", nome, senha);
       case JavaDB:
           Class.forName("org.apache.derby.jdbc.ClientDriver"); 
-          return DriverManager.getConnection("jdbc:derby://localhost:1527/lpsw", nome, senha);
+          return DriverManager.getConnection("jdbc:derby://localhost:1527/teste", nome, senha);
       }  
       return null;
    }  

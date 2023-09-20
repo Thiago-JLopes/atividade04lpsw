@@ -4,6 +4,8 @@
  */
 package com.mycompany.semana04lpsw;
 
+import com.mycompany.semana04lpsw.model.DaoUsuario;
+import com.mycompany.semana04lpsw.model.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,6 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 /**
  *
@@ -27,14 +30,21 @@ public class menu extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     public String senha;
+    DaoUsuario newUsuario;
 
     @Override
     public void init() {
         senha = getServletConfig().getInitParameter("senha");
     }
+ 
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        newUsuario = new DaoUsuario(0, "th", "1234");
+        List<Usuario> todos = newUsuario.buscarTodos();
+        
+        
 
         response.setContentType("text/html;charset=UTF-8");
 

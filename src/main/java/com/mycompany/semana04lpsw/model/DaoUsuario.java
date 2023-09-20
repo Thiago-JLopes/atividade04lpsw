@@ -21,8 +21,8 @@ import java.util.List;
 public class DaoUsuario {
     // Configura essas variáveis de acordo com o seu banco  
    private int BANCO;
-   private String NOME = null;
-   private String SENHA = null;  
+   private String NOME = "th";
+   private String SENHA = "1234";  
   
    private Connection con;  
    private Statement comando;  
