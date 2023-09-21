@@ -1,3 +1,9 @@
-/home/thiago/UFJF-2023.2/Sistemas_web/semana04lpsw/src/main/java/com/mycompany/semana04lpsw/JakartaRestConfiguration.java
-/home/thiago/UFJF-2023.2/Sistemas_web/semana04lpsw/src/main/java/com/mycompany/semana04lpsw/resources/JakartaEE91Resource.java
-/home/thiago/UFJF-2023.2/Sistemas_web/semana04lpsw/src/main/java/com/mycompany/semana04lpsw/menu.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/sair.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/JakartaRestConfiguration.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/resources/JakartaEE91Resource.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/welcome.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/menu.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/model/ConFactory.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/errojava.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/model/DaoUsuario.java
+/home/thiago/UFJF-2023.2/atividade04lpsw/src/main/java/com/mycompany/semana04lpsw/model/Usuario.java

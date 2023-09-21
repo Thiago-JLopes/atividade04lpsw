@@ -30,35 +30,36 @@ public class menu extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     public String senha;
-    DaoUsuario newUsuario;
+    DaoUsuario newDaoUsuario;
 
-    @Override
+   /* @Override
     public void init() {
         senha = getServletConfig().getInitParameter("senha");
-    }
+    }*/
  
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        newUsuario = new DaoUsuario(0, "th", "1234");
-        List<Usuario> todos = newUsuario.buscarTodos();
+        newDaoUsuario = new DaoUsuario(0, "th", "1234");
+        String nomeInp = request.getParameter("usuario");
+        String senhaInp = request.getParameter("senha");
         
-        
+        Usuario newUsusario = newDaoUsuario.buscar(nomeInp);
 
         response.setContentType("text/html;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
 
-            String id = "thiago";
+            //String id = "thiago";
 
-            if (request.getParameter("usuario") == null || request.getParameter("senha") == null || !request.getParameter("usuario").equals(id) || !request.getParameter("senha").equals(senha)) {
+            if (newUsusario == null || !senhaInp.equals(newUsusario.getSenha())) {
                 HttpSession session = request.getSession(true);
                 session.setAttribute("msg", "Login ou senha inválidos.");
                 response.sendRedirect("index.jsp");
             } else {
 
-                request.getSession(true).setAttribute("logged", request.getParameter("usuario"));
+                request.getSession(true).setAttribute("logged",nomeInp);
 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
